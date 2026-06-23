@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.4.xsd"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.4.xsd
+                                  https://dependency-check.github.io/DependencyCheck/dependency-suppression.1.4.xsd">
+    <suppress>
+        <notes><![CDATA[
+        file name: tomcat-embed-core-9.0.30.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.tomcat\.embed/tomcat-embed-core@.*$</packageUrl>
+        <!-- AJP connector not used -->
+        <cve>CVE-2020-1938</cve>
+        <!-- HTTP/2 cleartext (h2c) not enabled -->
+        <cve>CVE-2021-25122</cve>
+        <!-- No reverse proxy configured -->
+        <cve>CVE-2022-42252</cve>
+    </suppress>
+</suppressions>
